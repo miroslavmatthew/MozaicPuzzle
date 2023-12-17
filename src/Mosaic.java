@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Mosaic {
+public class Mosaic implements Comparable<Mosaic>{
     Random randgenerator = new Random(10);
     private int board[][];
     private int bomBoard[][];
@@ -45,5 +45,10 @@ public class Mosaic {
             }
         }
         return res;
+    }
+
+    @Override
+    public int compareTo(Mosaic other) {
+        return Integer.compare(this.heuristic, other.heuristic);
     }
 }
