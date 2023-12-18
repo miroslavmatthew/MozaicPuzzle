@@ -26,6 +26,16 @@ public class MozaicTester {
                     board[i][j]=sc.nextInt();
                 }
             }
+            MozaicPopulation population = new MozaicPopulation(n,100,board);
+            int cnt = 0;
+            while (population.getFittest().getHeuristic()>1){
+                cnt++;
+                for (int i = 0; i < 50; i++) {
+                    Mosaic[] parent = population.selectParent();
+                    Mosaic[] child = population.crossOver(parent[0],parent[1]);
+                }
+            }
+
         }
 
     }
