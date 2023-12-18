@@ -64,4 +64,12 @@ public class Mosaic implements Comparable<Mosaic>{
     public int[][] getBoard(){
         return this.board;
     }
+
+    public void doMutation(){
+        for(int i=0; i<bomBoard.length; i++){
+            for(int j=0; j<bomBoard[i].length; j++){
+                bomBoard[i][j] = bomBoard[i][j] ^ 1;
+            }
+        }
+    }
 }
