@@ -62,7 +62,27 @@ public class MozaicPopulation {
         return res;
     }
 
-    public void crossOver(Mosaic parent1, Mosaic parent2){
+    public Mosaic[] crossOver(Mosaic parent1, Mosaic parent2){
+        int boardSize = parent1.getBomBoard().length;
+        Mosaic[] res = new Mosaic[2];
 
+        //single line crossover
+        int crossoverPoint = (int)(randomizer.nextFloat() * boardSize);
+        int child1[][] = new int[boardSize][boardSize];
+        int child2[][] = new int[boardSize][boardSize];
+
+        for(int i = 0; i < boardSize; i++){
+            if(i <= crossoverPoint){
+                child1[i] = parent1.getBomBoard()[i];
+                child2[i] = parent2.getBomBoard()[i];
+            } else {
+                child1[i] = parent2.getBomBoard()[i];
+                child2[i] = parent1.getBomBoard()[i];
+            }
+        }
+        res[0] = new Mosaic(parent1.getBoard(), child1);
+        res[1] = new Mosaic(parent2.getBoard(), child2);
+
+        return res;
     }
 }

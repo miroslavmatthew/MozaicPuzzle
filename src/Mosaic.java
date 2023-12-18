@@ -7,6 +7,11 @@ public class Mosaic implements Comparable<Mosaic>{
     private int heuristic;
     private int move [][]={{-1,-1},{0,-1},{1,-1},{-1,0},{0,0},{1,0},{-1,1},{0,1},{1,1}};
 
+    public Mosaic(int[][] board, int[][] bomBoard){
+        this.board=board;
+        this.bomBoard=bomBoard;
+        this.heuristic=calcHeuristic();
+    }
     public Mosaic(int n,int board[][]) {
         this.board = board;
         this.bomBoard = new int[n][n];
@@ -50,5 +55,13 @@ public class Mosaic implements Comparable<Mosaic>{
     @Override
     public int compareTo(Mosaic other) {
         return Integer.compare(this.heuristic, other.heuristic);
+    }
+
+    public int[][] getBomBoard(){
+        return this.bomBoard;
+    }
+
+    public int[][] getBoard(){
+        return this.board;
     }
 }
