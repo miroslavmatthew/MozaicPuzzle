@@ -4,7 +4,8 @@ import java.util.Random;
 public class MozaicPopulation {
     public Mosaic[] population;
     public int fittest;
-    public int totalHeuristic;
+    public Random randomizer = new Random(123);
+
 
     public MozaicPopulation(int n,int size,int[][] board) {
         this.population = new Mosaic[size];
@@ -19,7 +20,6 @@ public class MozaicPopulation {
         for (int i = 0; i < population.length; i++) {
             if (population[i].getHeuristic()<min){
                 min=population[i].getHeuristic();
-                totalHeuristic += population[i].getHeuristic();
                 idx=i;
             }
         }
@@ -30,18 +30,17 @@ public class MozaicPopulation {
     public Mosaic[] selectParent(){
         Mosaic[] res = new Mosaic[2];
         Arrays.sort(population);
+        int maxHeuristic = population[population.length-1].getHeuristic();
         double[] probabilities = new double[population.length];
-        double newTotal = 0;
+        double total = 0;
         for (int i = 0; i < population.length; i++) {
-            int curr = totalHeuristic + 1 - population[i].getHeuristic();
+            int curr = maxHeuristic + 1 - population[i].getHeuristic();
             probabilities[i] = curr;
-            newTotal += curr;
+            total += curr;
         }
         for (int i = 0; i < population.length; i++) {
-            probabilities[i] /= newTotal;
+            probabilities[i] /= total;
         }
-        int seed = 123;
-        Random randomizer = new Random(seed);
         //ambil parent ke-1
         int i = 0;
         float parent1 = randomizer.nextFloat();
@@ -52,11 +51,11 @@ public class MozaicPopulation {
         res[0] = population[i];
         double temp = probabilities[i];
         probabilities[i] = 0;
-
+        //ambil parent ke-2
         i = 0;
         float parent2 = randomizer.nextFloat();
         while(parent2 > probabilities[i]){
-            parent2 -= (probabilities[i] + (probabilities[i] * (temp / (newTotal - temp))));
+            parent2 -= (probabilities[i] + (probabilities[i] * (temp / (total - temp))));
             i++;
         }
         res[1] = population[i];
