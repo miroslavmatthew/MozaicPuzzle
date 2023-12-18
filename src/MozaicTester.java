@@ -17,13 +17,16 @@ public class MozaicTester {
 //        Document doc = Jsoup.parse(driver.getPageSource());
 //        Elements board = doc.select("div.mosaic-cell-back");
 //        Elements x = board.select(".number");
-        int n = sc.nextInt();
+        int tc = sc.nextInt();
+        for (int q = 0; q < tc; q++) {
+            int n = sc.nextInt();
+            int board[][]= new int[n][n];
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    board[i][j]=sc.nextInt();
+                }
+            }
+        }
 
-//        System.out.println(doc);
-//        for (int i = 0; i < n; i++) {
-//            for (int j = 0; j < n; j++) {
-//
-//            }
-//        }
     }
 }
