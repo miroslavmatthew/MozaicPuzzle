@@ -12,7 +12,7 @@ public class Mosaic implements Comparable<Mosaic>{
         this.bomBoard=bomBoard;
         this.heuristic=calcHeuristic();
     }
-    public Mosaic(int n,int board[][]) {
+    public Mosaic(int n, int[][] board) {
         this.board = board;
         this.bomBoard = new int[n][n];
         for (int i = 0; i < n; i++) {
@@ -29,7 +29,7 @@ public class Mosaic implements Comparable<Mosaic>{
         return false;
     }
     public int getHeuristic(){
-        return heuristic;
+        return calcHeuristic();
     }
     private int calcHeuristic(){
         int res = 0;
@@ -65,11 +65,11 @@ public class Mosaic implements Comparable<Mosaic>{
         return this.board;
     }
 
+    //flip a random tile from 1 to 0 or 0 to 1
     public void doMutation(){
-        for(int i=0; i<bomBoard.length; i++){
-            for(int j=0; j<bomBoard[i].length; j++){
-                bomBoard[i][j] = bomBoard[i][j] ^ 1;
-            }
-        }
+        int i =  randgenerator.nextInt(bomBoard.length);
+        int j = randgenerator.nextInt(board.length);
+        bomBoard[i][j] = bomBoard[i][j] ^ 1;
+        this.heuristic=calcHeuristic();
     }
 }
