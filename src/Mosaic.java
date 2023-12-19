@@ -1,26 +1,28 @@
 import java.util.Random;
 
 public class Mosaic implements Comparable<Mosaic>{
-    Random randgenerator = new Random(10);
+    Random randgenerator;
     private int board[][];
     private int bomBoard[][];
     private int heuristic;
     private int move [][]={{-1,-1},{0,-1},{1,-1},{-1,0},{0,0},{1,0},{-1,1},{0,1},{1,1}};
 
-    public Mosaic(int[][] board, int[][] bomBoard){
+    public Mosaic(int[][] board, int[][] bomBoard,Random randomizer){
         this.board=board;
         this.bomBoard=bomBoard;
+        this.randgenerator = randomizer;
         this.heuristic=calcHeuristic();
     }
-    public Mosaic(int n, int[][] board) {
+    public Mosaic(int n, int[][] board,Random randomizer) {
         this.board = board;
         this.bomBoard = new int[n][n];
+        this.randgenerator=randomizer;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 bomBoard[i][j]=randgenerator.nextInt(2);
             }
         }
-        this.heuristic=calcHeuristic();
+        calcHeuristic();
     }
     private boolean valid(int x,int y){
         if (x>=0&&x<board.length&&y>=0&&y< board.length){
@@ -31,7 +33,7 @@ public class Mosaic implements Comparable<Mosaic>{
     public int getHeuristic(){
         return calcHeuristic();
     }
-    private int calcHeuristic(){
+    public int calcHeuristic(){
         int res = 0;
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
@@ -49,12 +51,13 @@ public class Mosaic implements Comparable<Mosaic>{
 
             }
         }
-        return res;
+        this.heuristic=res;
+        return this.heuristic;
     }
 
     @Override
     public int compareTo(Mosaic other) {
-        return Integer.compare(this.heuristic, other.heuristic);
+        return this.heuristic-other.heuristic;
     }
 
     public int[][] getBomBoard(){
@@ -71,5 +74,17 @@ public class Mosaic implements Comparable<Mosaic>{
         int j = randgenerator.nextInt(board.length);
         bomBoard[i][j] = bomBoard[i][j] ^ 1;
         this.heuristic=calcHeuristic();
+    }
+
+    @Override
+    public String toString() {
+        String a="";
+        for (int i = 0; i < bomBoard.length; i++) {
+            for (int j = 0; j < bomBoard.length; j++) {
+                a+=(bomBoard[i][j]+" ");
+            }
+            a+='\n';
+        }
+        return a;
     }
 }
