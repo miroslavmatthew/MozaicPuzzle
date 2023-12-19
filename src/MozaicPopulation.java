@@ -68,31 +68,32 @@ public class MozaicPopulation {
     public Mosaic crossOver(Mosaic parent1, Mosaic parent2){
         int boardSize = parent1.getBomBoard().length;
         Mosaic[] res = new Mosaic[2];
-
+        int cnt = 0;
         //single line crossover
-        int crossoverPoint = randomizer.nextInt(2);
+        int rd1=3, rd2=28;
+        do {
+            rd1 = this.randomizer.nextInt(boardSize*boardSize-4)+2;
+            rd2 = this.randomizer.nextInt(boardSize*boardSize-4)+2;
+        } while(Math.abs(rd1-rd2)<=2);
+        int pos1 = Math.min(rd1,rd2);
+        int pos2 = Math.max(rd1,rd2);
         int[][] child1 = new int[boardSize][boardSize];
         int[][] child2 = new int[boardSize][boardSize];
-        if (crossoverPoint==0){
-            for(int i = 0; i < boardSize; i++){
-                if(i%2 == 0){
-                    child1[i] = parent1.getBomBoard()[i];
-                    child2[i] = parent2.getBomBoard()[i];
-                } else {
-                    child1[i] = parent2.getBomBoard()[i];
-                    child2[i] = parent1.getBomBoard()[i];
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
+                if (cnt!=pos1){
+                    child1[i][j]=parent1.getBomBoard()[i][j];
+                    child2[i][j]=parent2.getBomBoard()[i][j];
+                    cnt++;
                 }
-            }
-        }else {
-            for(int i = 0; i < boardSize; i++){
-                for (int j = 0; j < boardSize; j++) {
-                    if (i % 2 == 0) {
-                        child1[j][i] = parent1.getBomBoard()[j][i];
-                        child2[j][i] = parent2.getBomBoard()[j][i];
-                    } else {
-                        child1[j][i] = parent2.getBomBoard()[j][i];
-                        child2[j][i] = parent1.getBomBoard()[j][i];
-                    }
+                else if (cnt!=pos2){
+                    child1[i][j]=parent2.getBomBoard()[i][j];
+                    child2[i][j]=parent1.getBomBoard()[i][j];
+                    cnt++;
+                }
+                else {
+                    child1[i][j]=parent1.getBomBoard()[i][j];
+                    child2[i][j]=parent2.getBomBoard()[i][j];
                 }
             }
         }

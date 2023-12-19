@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class MozaicTester {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        Random randomizer = new Random(1);
+        Random randomizer = new Random(2);
 //        System.setProperty("webdriver.chrome.driver","./chromedriver");
 //        WebDriver driver = new ChromeDriver();
 //        driver.get("https://www.puzzle-minesweeper.com/mosaic-5x5-easy/");
@@ -28,7 +28,7 @@ public class MozaicTester {
                 }
             }
 
-            MozaicPopulation population = new MozaicPopulation(n,100,board,randomizer,0.05,0.85,0.001);
+            MozaicPopulation population = new MozaicPopulation(n,300,board,randomizer,0.05,0.85,0.025);
             int cnt = 0;
             population.generateRandom();
             population.computeAllFitness();
