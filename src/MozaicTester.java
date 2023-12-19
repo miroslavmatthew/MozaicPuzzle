@@ -28,28 +28,17 @@ public class MozaicTester {
                 }
             }
 
-//            Mosaic mz = new Mosaic(n,board,randomizer);
-//            Mosaic ma = new Mosaic(n,board,randomizer);
-//            System.out.println(mz);
-//            System.out.println(ma);
-            MozaicPopulation population = new MozaicPopulation(n,100,board,randomizer,0.05,0.85,0.025);
-//            Mosaic res =population.crossOver(mz,ma);
-//            System.out.println(res);
-//            System.out.println(res.getHeuristic());
-//            System.out.println(res.calcHeuristic());
+            MozaicPopulation population = new MozaicPopulation(n,100,board,randomizer,0.05,0.85,0.001);
             int cnt = 0;
             population.generateRandom();
             population.computeAllFitness();
             Mosaic fittest = population.getFittest();
-            while (cnt!=10){
+            while (fittest.getHeuristic()>=1){
                 cnt++;
-                System.out.println(fittest.getHeuristic());
+//                System.out.println(fittest.getHeuristic());
                 MozaicPopulation offspring = population.makeOffspring();
                 while (offspring.population.size()!=offspring.populationSize) {
-                    //System.out.println("fill");
                     Mosaic[] parents = population.selectParent();
-                    //System.out.println(parents[0]);
-                    //System.out.println(parents[1]);
                     if (randomizer.nextDouble()<population.crossoverRate) {
                         //System.out.println("crossed");
                         Mosaic child = population.crossOver(parents[0],parents[1]);
@@ -65,6 +54,7 @@ public class MozaicTester {
                 population.computeAllFitness();
                 fittest=population.getFittest();
             }
+            System.out.println(fittest);
             System.out.println("Successfull in "+cnt+" generation");
 
         }

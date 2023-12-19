@@ -39,7 +39,7 @@ public class Mosaic implements Comparable<Mosaic>{
             for (int j = 0; j < board.length; j++) {
                 if (board[i][j]!=-1){
                     int totalBom = 0;
-                    for (int k = 0; k < 8; k++) {
+                    for (int k = 0; k <= 8; k++) {
                         if (valid(i+move[k][0],j+move[k][1])){
                             if (bomBoard[i+move[k][0]][j+move[k][1]]==1){
                                 totalBom++;
@@ -73,7 +73,6 @@ public class Mosaic implements Comparable<Mosaic>{
         int i =  randgenerator.nextInt(bomBoard.length);
         int j = randgenerator.nextInt(board.length);
         bomBoard[i][j] = bomBoard[i][j] ^ 1;
-        this.heuristic=calcHeuristic();
     }
 
     @Override

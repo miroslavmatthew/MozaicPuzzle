@@ -52,28 +52,16 @@ public class MozaicPopulation {
         for (int i = 0; i < population.size(); i++) {
             probabilities[i] /= total;
         }
-        //ambil parent ke-1
-        int i = 0;
-        double parent1 = randomizer.nextDouble();
-
-        while(parent1 > probabilities[i]){
-            parent1 -= probabilities[i];
-            i++;
+        for (int i = 0; i < 2; i++) {
+            int j=-1;
+            double prob = this.randomizer.nextDouble();
+            double sum = 0.0;
+            do {
+                j++;
+                sum = sum + probabilities[j];
+            } while(sum<prob);
+            res[i]=population.get(j);
         }
-        res[0] = population.get(i);
-        double temp = probabilities[i];
-        probabilities[i] = 0;
-        //ambil parent ke-2
-        i = 0;
-        double parent2 = randomizer.nextDouble();
-        while(parent2 > probabilities[i]){
-//            parent2 -= (probabilities[i] + (probabilities[i] * (temp / (total - temp))));
-            System.out.println(parent2+" "+probabilities[i]);
-            parent2 -= probabilities[i]/temp;
-            System.out.println(parent2);
-            i++;
-        }
-        res[1] = population.get(i);
         return res;
     }
 
@@ -82,17 +70,30 @@ public class MozaicPopulation {
         Mosaic[] res = new Mosaic[2];
 
         //single line crossover
-        int crossoverPoint = randomizer.nextInt(boardSize - 1);
+        int crossoverPoint = randomizer.nextInt(2);
         int[][] child1 = new int[boardSize][boardSize];
         int[][] child2 = new int[boardSize][boardSize];
-
-        for(int i = 0; i < boardSize; i++){
-            if(i <= crossoverPoint){
-                child1[i] = parent1.getBomBoard()[i];
-                child2[i] = parent2.getBomBoard()[i];
-            } else {
-                child1[i] = parent2.getBomBoard()[i];
-                child2[i] = parent1.getBomBoard()[i];
+        if (crossoverPoint==0){
+            for(int i = 0; i < boardSize; i++){
+                if(i%2 == 0){
+                    child1[i] = parent1.getBomBoard()[i];
+                    child2[i] = parent2.getBomBoard()[i];
+                } else {
+                    child1[i] = parent2.getBomBoard()[i];
+                    child2[i] = parent1.getBomBoard()[i];
+                }
+            }
+        }else {
+            for(int i = 0; i < boardSize; i++){
+                for (int j = 0; j < boardSize; j++) {
+                    if (i % 2 == 0) {
+                        child1[j][i] = parent1.getBomBoard()[j][i];
+                        child2[j][i] = parent2.getBomBoard()[j][i];
+                    } else {
+                        child1[j][i] = parent2.getBomBoard()[j][i];
+                        child2[j][i] = parent1.getBomBoard()[j][i];
+                    }
+                }
             }
         }
         res[0] = new Mosaic(parent1.getBoard(), child1,this.randomizer);
@@ -103,7 +104,6 @@ public class MozaicPopulation {
     public MozaicPopulation makeOffspring(){
         MozaicPopulation population2 = new MozaicPopulation(n,populationSize,board,randomizer,elitPct,crossoverRate,mutationRate);
         int n = (int) (elitPct*populationSize);
-        computeAllFitness();
         for (int i = 0; i < n; i++) {
             population2.addMozaic(population.get(i));
         }
