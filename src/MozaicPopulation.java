@@ -68,9 +68,9 @@ public class MozaicPopulation {
         double parent2 = randomizer.nextDouble();
         while(parent2 > probabilities[i]){
 //            parent2 -= (probabilities[i] + (probabilities[i] * (temp / (total - temp))));
-//            System.out.println(parent2+" "+probabilities[i]);
+            System.out.println(parent2+" "+probabilities[i]);
             parent2 -= probabilities[i]/temp;
-//            System.out.println(parent2);
+            System.out.println(parent2);
             i++;
         }
         res[1] = population.get(i);
@@ -103,6 +103,7 @@ public class MozaicPopulation {
     public MozaicPopulation makeOffspring(){
         MozaicPopulation population2 = new MozaicPopulation(n,populationSize,board,randomizer,elitPct,crossoverRate,mutationRate);
         int n = (int) (elitPct*populationSize);
+        computeAllFitness();
         for (int i = 0; i < n; i++) {
             population2.addMozaic(population.get(i));
         }
