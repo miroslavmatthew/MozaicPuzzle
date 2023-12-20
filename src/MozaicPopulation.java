@@ -111,7 +111,7 @@ public class MozaicPopulation {
                     }
                 }
             }
-        } else if(chooseCrossover < 0.6){
+        } else if(chooseCrossover < 0.65){
             //single pivot crossover memotong secara horizontal
             int crossoverPoint = (int)(randomizer.nextFloat() * (boardSize-1));
 
@@ -124,7 +124,7 @@ public class MozaicPopulation {
                     child2[i] = parent1.getBomBoard()[i];
                 }
             }
-        } else if(chooseCrossover < 0.8){
+        } else if(chooseCrossover < 0.9){
             //single pivot crossover memotong secara vertical
             int crossoverPoint = (int)(randomizer.nextFloat() * (boardSize-1));
 
@@ -140,7 +140,7 @@ public class MozaicPopulation {
                     }
                 }
             }
-        } else if(chooseCrossover < 0.9){
+        } else if(chooseCrossover < 0.95){
             //cross over selang seling barisnya
 
             for(int i = 0; i < boardSize; i++){
