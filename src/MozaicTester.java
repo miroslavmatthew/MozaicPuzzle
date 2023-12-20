@@ -1,60 +1,73 @@
-//import org.jsoup.Jsoup;
-//import org.jsoup.nodes.Document;
-//import org.jsoup.select.Elements;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.io.IOException;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class MozaicTester {
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner sc = new Scanner(new File("test.txt"));
         Random randomizer = new Random(2);
-//        System.setProperty("webdriver.chrome.driver","./chromedriver");
-//        WebDriver driver = new ChromeDriver();
-//        driver.get("https://www.puzzle-minesweeper.com/mosaic-5x5-easy/");
-//        Document doc = Jsoup.parse(driver.getPageSource());
-//        Elements board = doc.select("div.mosaic-cell-back");
-//        Elements x = board.select(".number");
+
+        //input number of testcase
         int tc = sc.nextInt();
         for (int q = 0; q < tc; q++) {
-            int n = sc.nextInt();
+            int n = sc.nextInt();//input the size of the board
             int[][] board = new int[n][n];
+            // input the board if there is no number in the tile then write -1
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
                     board[i][j]=sc.nextInt();
                 }
             }
-
-            MozaicPopulation population = new MozaicPopulation(n,300,board,randomizer,0.05,0.8,0.025);
-            int cnt = 0;
-            population.generateRandom();
-            population.computeAllFitness();
-            Mosaic fittest = population.getFittest();
-            while (fittest.getHeuristic()>=1){
-                cnt++;
-                MozaicPopulation offspring = population.makeOffspring();
+            // get all the parameter
+            Scanner param = new Scanner(new File("param.txt"));
+            int maxGeneration = param.nextInt();
+            int populationSize = param.nextInt();
+            int elitismPercentage = param.nextInt();
+            int crossoverRate = param.nextInt();
+            int mutationRate = param.nextInt();
+            // initialize the population
+            MozaicPopulation population = new MozaicPopulation(n,populationSize,board,randomizer,elitismPercentage,crossoverRate,mutationRate);
+            int cnt = 0;// the generation counter
+            population.generateRandom();// get a random population
+            population.computeAllFitness();// compute all of the fitness
+            Mosaic fittest = population.getFittest();//get the best from the population
+            while (cnt!=maxGeneration){
+                cnt++;// count the generation
+                MozaicPopulation offspring = population.makeOffspring();//make the offspring by elitism
+                // get the other of the population by crossover
                 while (offspring.population.size()!=offspring.populationSize) {
-                    Mosaic[] parents = population.selectParent();
+                    Mosaic[] parents = population.selectParent();//select the parent
+                    // calculate crossover by the crossover rate
                     if (randomizer.nextDouble()<population.crossoverRate) {
-                        //System.out.println("crossed");
+                        // do crossover
                         Mosaic child = population.crossOver(parents[0],parents[1]);
+                        // do mutation by the mutation rate
                         if (randomizer.nextDouble()<offspring.mutationRate) {
-                            //System.out.println("mutate");
                             child.doMutation();
                         }
+                        // add the child to the offspring
                         offspring.addMozaic(child);
                     }
-                    //else System.out.println("not crossed");
+
                 }
+                // change the population with the offspring
                 population=offspring;
+                // compute all the new fitness
                 population.computeAllFitness();
+                // get the best in the population
                 fittest=population.getFittest();
             }
-            System.out.println(fittest);
-            System.out.println("Successfull in "+cnt+" generation");
+            // if solved
+            if (fittest.getHeuristic()==0){
+                System.out.println(fittest);
+                System.out.println("Successfull in "+cnt+" generation");
+            }
+            // if not solve
+            else {
+                System.out.println(fittest);
+                System.out.println("the best in "+cnt+" generation");
+            }
 
         }
 

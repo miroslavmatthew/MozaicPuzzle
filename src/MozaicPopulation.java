@@ -11,7 +11,7 @@ public class MozaicPopulation {
     public double crossoverRate;
     public double mutationRate;
 
-    //initiate the population with a random board
+    //initiate the population parameter
     public MozaicPopulation(int n,int size,int[][] board,Random randomizer,double elitPct,double crossoverRate,double mutationRate) {
         this.population = new ArrayList<>();
         this.populationSize = size;
@@ -22,17 +22,20 @@ public class MozaicPopulation {
         this.n= n;
         this.board=board;
     }
+    //compute all of the population fitness
     public void computeAllFitness(){
         for (int i = 0; i < population.size(); i++) {
             population.get(i).calcHeuristic();
         }
         population.sort(Mosaic::compareTo);
     }
+    //generate random population
     public void generateRandom(){
         for (int i = 0; i < populationSize; i++) {
             population.add(new Mosaic(n,board,this.randomizer));
         }
     }
+    //get the best fitness in the population
     public Mosaic getFittest(){
         return population.get(0);
     }
