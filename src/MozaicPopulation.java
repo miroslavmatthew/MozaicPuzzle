@@ -81,7 +81,9 @@ public class MozaicPopulation {
         int cnt = 0;
 
         double chooseCrossover = this.randomizer.nextDouble();
-        if(chooseCrossover < 0.5){
+
+        //ini merupakan kombinasi dari beberapa method crossover yang telah kami buat.
+        if(chooseCrossover < 0.4){
             //double pivot crossover
             int rd1=3, rd2=28;
             do {
@@ -109,9 +111,9 @@ public class MozaicPopulation {
                     }
                 }
             }
-        } else if(chooseCrossover < 0.75 ){
+        } else if(chooseCrossover < 0.6){
             //single pivot crossover memotong secara horizontal
-            int crossoverPoint = (int)(randomizer.nextFloat() * boardSize);
+            int crossoverPoint = (int)(randomizer.nextFloat() * (boardSize-1));
 
             for(int i = 0; i < boardSize; i++){
                 if(i <= crossoverPoint){
@@ -122,14 +124,44 @@ public class MozaicPopulation {
                     child2[i] = parent1.getBomBoard()[i];
                 }
             }
-        } else {
+        } else if(chooseCrossover < 0.8){
             //single pivot crossover memotong secara vertical
-            int crossoverPoint = (int)(randomizer.nextFloat() * boardSize);
+            int crossoverPoint = (int)(randomizer.nextFloat() * (boardSize-1));
 
             for(int i = 0; i < boardSize; i++){
                 for (int j = 0; j < boardSize; j++) {
 
                     if(j <= crossoverPoint){
+                        child1[i][j] = parent1.getBomBoard()[i][j];
+                        child2[i][j] = parent2.getBomBoard()[i][j];
+                    } else {
+                        child1[i][j] = parent2.getBomBoard()[i][j];
+                        child2[i][j] = parent1.getBomBoard()[i][j];
+                    }
+                }
+            }
+        } else if(chooseCrossover < 0.9){
+            //cross over selang seling barisnya
+
+            for(int i = 0; i < boardSize; i++){
+                for (int j = 0; j < boardSize; j++) {
+
+                    if(i % 2 == 0){
+                        child1[i][j] = parent1.getBomBoard()[i][j];
+                        child2[i][j] = parent2.getBomBoard()[i][j];
+                    } else {
+                        child1[i][j] = parent2.getBomBoard()[i][j];
+                        child2[i][j] = parent1.getBomBoard()[i][j];
+                    }
+                }
+            }
+        } else {
+            //cross over selang seling kolomnya
+
+            for(int i = 0; i < boardSize; i++){
+                for (int j = 0; j < boardSize; j++) {
+
+                    if(j % 2 == 0){
                         child1[i][j] = parent1.getBomBoard()[i][j];
                         child2[i][j] = parent2.getBomBoard()[i][j];
                     } else {
