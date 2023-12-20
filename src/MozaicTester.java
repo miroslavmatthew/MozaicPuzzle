@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MozaicTester {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException{
         Scanner sc = new Scanner(new File("test.txt"));
         Random randomizer = new Random(2);
 
@@ -20,19 +20,19 @@ public class MozaicTester {
                 }
             }
             // get all the parameter
-            Scanner param = new Scanner(new File("param.txt"));
+            Scanner param = new Scanner(new File("params.txt"));
             int maxGeneration = param.nextInt();
             int populationSize = param.nextInt();
-            int elitismPercentage = param.nextInt();
-            int crossoverRate = param.nextInt();
-            int mutationRate = param.nextInt();
+            double elitismPercentage = param.nextDouble();
+            double crossoverRate = param.nextDouble();
+            double mutationRate = param.nextDouble();
             // initialize the population
             MozaicPopulation population = new MozaicPopulation(n,populationSize,board,randomizer,elitismPercentage,crossoverRate,mutationRate);
             int cnt = 0;// the generation counter
             population.generateRandom();// get a random population
             population.computeAllFitness();// compute all of the fitness
             Mosaic fittest = population.getFittest();//get the best from the population
-            while (cnt!=maxGeneration){
+            while (cnt!=maxGeneration&&fittest.getHeuristic()>0){
                 cnt++;// count the generation
                 MozaicPopulation offspring = population.makeOffspring();//make the offspring by elitism
                 // get the other of the population by crossover

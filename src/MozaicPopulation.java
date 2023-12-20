@@ -11,7 +11,7 @@ public class MozaicPopulation {
     public double crossoverRate;
     public double mutationRate;
 
-    //initiate the population parameter
+    // initiate the population parameter
     public MozaicPopulation(int n,int size,int[][] board,Random randomizer,double elitPct,double crossoverRate,double mutationRate) {
         this.population = new ArrayList<>();
         this.populationSize = size;
@@ -22,40 +22,43 @@ public class MozaicPopulation {
         this.n= n;
         this.board=board;
     }
-    //compute all of the population fitness
+    // compute all of the population fitness
     public void computeAllFitness(){
         for (int i = 0; i < population.size(); i++) {
             population.get(i).calcHeuristic();
         }
         population.sort(Mosaic::compareTo);
     }
-    //generate random population
+    // generate random population
     public void generateRandom(){
         for (int i = 0; i < populationSize; i++) {
             population.add(new Mosaic(n,board,this.randomizer));
         }
     }
-    //get the best fitness in the population
+    // get the best fitness in the population
     public Mosaic getFittest(){
         return population.get(0);
     }
+    // add a single mozaic to the population
     public void addMozaic(Mosaic target){
         population.add(target);
     }
+    // select parent with roulette wheel
     public Mosaic[] selectParent(){
         Mosaic[] res = new Mosaic[2];
         int maxHeuristic = population.get(population.size()-1).getHeuristic();
         double[] probabilities = new double[population.size()];
         double total = 0;
+        // we want the smaller heuristic to get better chance because smaller is better
         for (int i = 0; i < population.size(); i++) {
-            int curr = maxHeuristic + 1 - population.get(i).getHeuristic();
+            int curr = maxHeuristic + 1 - population.get(i).getHeuristic();// make the smallest heuristic bigger
             probabilities[i] = curr;
             total += curr;
         }
         for (int i = 0; i < population.size(); i++) {
-            probabilities[i] /= total;
+            probabilities[i] /= total;// make the probabilities by divide by total
         }
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 2; i++) {// select 2 parent
             int j=-1;
             double prob = this.randomizer.nextDouble();
             double sum = 0.0;
