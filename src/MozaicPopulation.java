@@ -69,7 +69,7 @@ public class MozaicPopulation {
         int boardSize = parent1.getBomBoard().length;
         Mosaic[] res = new Mosaic[2];
         int cnt = 0;
-        //single line crossover
+        //double pivot crossover
         int rd1=3, rd2=28;
         do {
             rd1 = this.randomizer.nextInt(boardSize*boardSize-4)+2;

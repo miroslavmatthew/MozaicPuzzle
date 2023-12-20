@@ -28,7 +28,7 @@ public class MozaicTester {
                 }
             }
 
-            MozaicPopulation population = new MozaicPopulation(n,300,board,randomizer,0.05,0.85,0.025);
+            MozaicPopulation population = new MozaicPopulation(n,300,board,randomizer,0.03,0.85,0.025);
             int cnt = 0;
             population.generateRandom();
             population.computeAllFitness();
