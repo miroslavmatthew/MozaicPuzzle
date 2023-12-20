@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class MozaicTester {
     public static void main(String[] args) throws FileNotFoundException{
-        Scanner sc = new Scanner(new File("test.txt"));
+        Scanner sc = new Scanner(new File("out/production/MozaicPuzzle/test.txt"));
         Random randomizer = new Random(2);
 
         //input number of testcase
@@ -20,7 +20,7 @@ public class MozaicTester {
                 }
             }
             // get all the parameter
-            Scanner param = new Scanner(new File("params.txt"));
+            Scanner param = new Scanner(new File("out/production/MozaicPuzzle/params.txt"));
             int maxGeneration = param.nextInt();
             int populationSize = param.nextInt();
             double elitismPercentage = param.nextDouble();
