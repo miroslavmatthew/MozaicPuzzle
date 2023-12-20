@@ -28,14 +28,13 @@ public class MozaicTester {
                 }
             }
 
-            MozaicPopulation population = new MozaicPopulation(n,300,board,randomizer,0.03,0.85,0.025);
+            MozaicPopulation population = new MozaicPopulation(n,300,board,randomizer,0.05,0.8,0.025);
             int cnt = 0;
             population.generateRandom();
             population.computeAllFitness();
             Mosaic fittest = population.getFittest();
             while (fittest.getHeuristic()>=1){
                 cnt++;
-//                System.out.println(fittest.getHeuristic());
                 MozaicPopulation offspring = population.makeOffspring();
                 while (offspring.population.size()!=offspring.populationSize) {
                     Mosaic[] parents = population.selectParent();
