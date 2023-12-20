@@ -73,36 +73,74 @@ public class MozaicPopulation {
 
     public Mosaic crossOver(Mosaic parent1, Mosaic parent2){
         int boardSize = parent1.getBomBoard().length;
-        Mosaic[] res = new Mosaic[2];
-        int cnt = 0;
-        //double pivot crossover
-        int rd1=3, rd2=28;
-        do {
-            rd1 = this.randomizer.nextInt(boardSize*boardSize-4)+2;
-            rd2 = this.randomizer.nextInt(boardSize*boardSize-4)+2;
-        } while(Math.abs(rd1-rd2)<=2);
-        int pos1 = Math.min(rd1,rd2);
-        int pos2 = Math.max(rd1,rd2);
+        //declare dulu papan hasil crossovernya
         int[][] child1 = new int[boardSize][boardSize];
         int[][] child2 = new int[boardSize][boardSize];
-        for (int i = 0; i < boardSize; i++) {
-            for (int j = 0; j < boardSize; j++) {
-                if (cnt!=pos1){
-                    child1[i][j]=parent1.getBomBoard()[i][j];
-                    child2[i][j]=parent2.getBomBoard()[i][j];
-                    cnt++;
+
+        Mosaic[] res = new Mosaic[2];
+        int cnt = 0;
+
+        double chooseCrossover = this.randomizer.nextDouble();
+        if(chooseCrossover < 0.5){
+            //double pivot crossover
+            int rd1=3, rd2=28;
+            do {
+                rd1 = this.randomizer.nextInt(boardSize*boardSize-4)+2;
+                rd2 = this.randomizer.nextInt(boardSize*boardSize-4)+2;
+            } while(Math.abs(rd1-rd2)<=2);
+            int pos1 = Math.min(rd1,rd2);
+            int pos2 = Math.max(rd1,rd2);
+
+            for (int i = 0; i < boardSize; i++) {
+                for (int j = 0; j < boardSize; j++) {
+                    if (cnt!=pos1){
+                        child1[i][j]=parent1.getBomBoard()[i][j];
+                        child2[i][j]=parent2.getBomBoard()[i][j];
+                        cnt++;
+                    }
+                    else if (cnt!=pos2){
+                        child1[i][j]=parent2.getBomBoard()[i][j];
+                        child2[i][j]=parent1.getBomBoard()[i][j];
+                        cnt++;
+                    }
+                    else {
+                        child1[i][j]=parent1.getBomBoard()[i][j];
+                        child2[i][j]=parent2.getBomBoard()[i][j];
+                    }
                 }
-                else if (cnt!=pos2){
-                    child1[i][j]=parent2.getBomBoard()[i][j];
-                    child2[i][j]=parent1.getBomBoard()[i][j];
-                    cnt++;
+            }
+        } else if(chooseCrossover < 0.75 ){
+            //single pivot crossover memotong secara horizontal
+            int crossoverPoint = (int)(randomizer.nextFloat() * boardSize);
+
+            for(int i = 0; i < boardSize; i++){
+                if(i <= crossoverPoint){
+                    child1[i] = parent1.getBomBoard()[i];
+                    child2[i] = parent2.getBomBoard()[i];
+                } else {
+                    child1[i] = parent2.getBomBoard()[i];
+                    child2[i] = parent1.getBomBoard()[i];
                 }
-                else {
-                    child1[i][j]=parent1.getBomBoard()[i][j];
-                    child2[i][j]=parent2.getBomBoard()[i][j];
+            }
+        } else {
+            //single pivot crossover memotong secara vertical
+            int crossoverPoint = (int)(randomizer.nextFloat() * boardSize);
+
+            for(int i = 0; i < boardSize; i++){
+                for (int j = 0; j < boardSize; j++) {
+
+                    if(j <= crossoverPoint){
+                        child1[i][j] = parent1.getBomBoard()[i][j];
+                        child2[i][j] = parent2.getBomBoard()[i][j];
+                    } else {
+                        child1[i][j] = parent2.getBomBoard()[i][j];
+                        child2[i][j] = parent1.getBomBoard()[i][j];
+                    }
                 }
             }
         }
+
+
         res[0] = new Mosaic(parent1.getBoard(), child1,this.randomizer);
         res[1] = new Mosaic(parent2.getBoard(), child2,this.randomizer);
         int randomChild = randomizer.nextInt(2);
