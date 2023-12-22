@@ -388,5 +388,215 @@ Successfull in 13 generation
 1 1 1 0 0 
 0 0 0 0 0 
 Successfull in 14 generation
-Acurracy =0.8
-right 52 of 65
+0 1 1 0 0 
+1 1 1 1 0 
+1 1 1 1 1 
+0 1 1 1 1 
+0 0 1 0 0 
+Successfull in 9 generation
+1 0 0 0 1 
+1 0 0 0 1 
+1 1 1 1 1 
+0 0 1 1 1 
+1 0 0 0 0 
+Successfull in 19 generation
+1 1 0 1 0 
+1 1 0 1 0 
+1 0 1 0 0 
+1 1 1 0 0 
+1 0 0 1 1 
+Successfull in 17 generation
+0 0 1 1 0 
+0 0 1 1 0 
+0 1 0 1 1 
+1 1 0 0 1 
+1 0 0 0 0 
+Successfull in 15 generation
+0 1 1 0 0 
+0 0 1 1 0 
+0 0 0 1 0 
+0 0 0 1 0 
+1 1 0 1 1 
+Successfull in 18 generation
+0 1 1 1 0 
+0 0 1 0 0 
+0 1 1 0 0 
+1 0 0 0 0 
+1 0 0 1 1 
+Successfull in 7 generation
+0 0 0 1 0 
+0 0 1 1 0 
+0 1 1 1 0 
+0 1 1 1 0 
+0 0 1 1 1 
+Successfull in 11 generation
+0 0 0 0 1 
+1 0 0 0 1 
+1 1 0 0 0 
+1 1 0 1 1 
+0 0 0 0 1 
+the best in 500 generation
+0 0 0 0 0 
+0 1 1 0 0 
+1 1 1 1 1 
+0 1 1 1 1 
+0 0 1 0 0 
+Successfull in 9 generation
+1 0 0 0 1 
+1 0 0 1 1 
+1 1 0 1 1 
+1 0 1 0 0 
+1 0 0 0 0 
+Successfull in 19 generation
+0 1 0 0 1 
+1 1 1 1 1 
+1 1 1 1 0 
+0 1 1 0 0 
+1 1 1 0 0 
+the best in 500 generation
+1 0 0 0 1 
+1 0 0 1 1 
+0 1 1 1 0 
+0 1 1 0 0 
+0 1 1 0 0 
+Successfull in 17 generation
+0 0 1 0 1 
+1 1 0 0 1 
+1 1 0 1 1 
+1 1 0 0 0 
+1 0 0 0 1 
+the best in 500 generation
+1 1 0 0 1 
+0 0 0 0 0 
+0 0 1 1 0 
+0 1 1 1 0 
+0 1 1 1 1 
+Successfull in 14 generation
+1 0 0 0 1 
+1 1 0 0 0 
+1 1 0 0 0 
+1 1 1 1 0 
+0 1 1 0 0 
+Successfull in 77 generation
+0 1 1 1 0 
+0 1 1 1 0 
+1 1 1 0 0 
+1 1 0 0 0 
+0 1 1 1 0 
+Successfull in 36 generation
+0 0 0 0 0 
+0 1 1 1 0 
+1 1 1 0 0 
+0 1 0 1 1 
+1 1 0 1 1 
+Successfull in 15 generation
+1 0 0 0 1 
+1 0 0 0 1 
+1 1 0 0 0 
+1 1 1 0 0 
+0 1 1 1 0 
+Successfull in 8 generation
+1 1 0 1 0 
+0 1 1 0 0 
+1 1 1 1 0 
+0 1 1 1 0 
+1 0 1 1 0 
+the best in 500 generation
+1 0 0 1 1 
+0 0 0 0 1 
+0 0 0 0 1 
+1 1 0 0 1 
+1 1 0 0 1 
+Successfull in 15 generation
+1 1 1 1 0 
+0 0 1 0 0 
+0 0 1 1 0 
+1 1 1 0 1 
+1 1 0 0 1 
+Successfull in 22 generation
+1 1 0 0 0 
+0 0 0 1 1 
+0 0 1 1 1 
+0 0 0 1 0 
+0 1 0 0 0 
+Successfull in 14 generation
+1 1 0 0 0 
+0 1 0 1 1 
+0 1 1 1 1 
+0 1 1 1 1 
+0 0 0 0 1 
+Successfull in 15 generation
+1 0 1 1 1 
+1 0 0 0 0 
+0 0 1 0 0 
+1 0 1 0 0 
+0 0 1 1 1 
+Successfull in 20 generation
+1 0 0 1 1 
+1 0 0 0 0 
+1 0 0 0 0 
+1 0 1 1 1 
+0 0 0 1 1 
+Successfull in 10 generation
+1 1 0 1 1 
+1 1 0 0 1 
+0 0 0 0 1 
+0 0 0 0 1 
+1 1 1 1 1 
+Successfull in 16 generation
+1 1 0 0 1 
+0 1 1 1 1 
+0 1 1 1 1 
+1 0 0 1 1 
+1 0 0 0 1 
+Successfull in 12 generation
+0 0 0 0 1 
+1 0 0 0 1 
+0 1 0 0 0 
+1 0 0 0 0 
+1 0 0 1 1 
+the best in 500 generation
+1 1 1 0 0 
+0 1 1 1 0 
+0 1 1 1 0 
+1 1 1 0 0 
+0 1 0 1 0 
+the best in 500 generation
+0 0 0 0 1 
+1 0 0 1 1 
+1 0 1 1 1 
+1 1 1 1 1 
+0 0 1 1 0 
+Successfull in 12 generation
+0 1 0 1 1 
+0 0 0 0 0 
+0 0 0 0 0 
+1 1 0 0 1 
+1 1 0 0 1 
+Successfull in 13 generation
+1 1 1 1 0 
+0 0 1 0 0 
+0 0 0 0 0 
+0 1 1 0 0 
+1 1 1 1 0 
+Successfull in 13 generation
+1 0 0 0 1 
+1 0 0 0 0 
+1 1 0 0 1 
+1 1 0 0 1 
+1 0 0 1 1 
+Successfull in 11 generation
+0 1 1 0 0 
+0 0 1 0 0 
+0 1 0 0 1 
+0 0 1 1 0 
+1 1 1 1 0 
+the best in 500 generation
+1 1 1 0 1 
+0 0 0 0 0 
+0 0 1 0 0 
+0 1 1 0 0 
+1 1 1 1 1 
+Successfull in 12 generation
+Acurracy = 0.8
+right 80 of 100
