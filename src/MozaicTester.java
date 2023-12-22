@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class MozaicTester {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(new File("src/test2.txt"));
+        Scanner sc = new Scanner(new File("src/test.txt"));
         Random randomizer = new Random(2);
         FileWriter fw = new FileWriter("src/output.txt");
 
