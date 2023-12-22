@@ -1,12 +1,15 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class MozaicTester {
-    public static void main(String[] args) throws FileNotFoundException{
-        Scanner sc = new Scanner(new File("src/test.txt"));
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(new File("src/test2.txt"));
         Random randomizer = new Random(2);
+        FileWriter fw = new FileWriter("src/output.txt");
 
         //input number of testcase
         int tc = sc.nextInt();
@@ -60,16 +63,20 @@ public class MozaicTester {
             }
             // if solved
             if (fittest.getHeuristic()==0){
+                fw.write(fittest.toString());
+                fw.write("Successfull in "+cnt+" generation\n");
                 System.out.println(fittest);
                 System.out.println("Successfull in "+cnt+" generation");
             }
             // if not solve
             else {
+                fw.write(fittest.toString());
+                fw.write("the best in "+cnt+" generation\n");
                 System.out.println(fittest);
                 System.out.println("the best in "+cnt+" generation");
             }
 
         }
-
+        fw.close();
     }
 }
