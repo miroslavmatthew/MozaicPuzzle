@@ -601,8 +601,3 @@ the best in 500 generation
 Successfull in 12 generation
 Acurracy = 0.8
 right 80 of 100
-=======
-Successfull in 11 generation
-Acurracy = 0.9076923076923077
-right 59 of 65
->>>>>>> 42de3b7ea782ecf0cf208bde327529e30638ef95
