@@ -32,6 +32,7 @@ public class Mosaic implements Comparable<Mosaic>{
         }
         return false;
     }
+    // return nilai heuristicnya
     public int getHeuristic(){
         return calcHeuristic();
     }
@@ -42,7 +43,6 @@ public class Mosaic implements Comparable<Mosaic>{
     // semakin besar semakin jelek karena ketidak sesuaian semakin besar
 //    public int calcHeuristic(){
 //        int res = 0;
-//        int wrongTile =0;
 //        for (int i = 0; i < board.length; i++) {
 //            for (int j = 0; j < board.length; j++) {
 //                if (board[i][j]!=-1){
@@ -56,7 +56,7 @@ public class Mosaic implements Comparable<Mosaic>{
 //                    }
 //                    res+=Math.abs(board[i][j]-totalBom);
 //                }
-//
+
 //            }
 //        }
 //        this.heuristic=res;
@@ -69,21 +69,19 @@ public class Mosaic implements Comparable<Mosaic>{
     // semakin besar semakin jelek karena ketidak sesuaian semakin besar
     public int calcHeuristic(){
         int res = 0;
-        int wrongTile =0;
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
                 if (board[i][j]!=-1){
                     int totalBom = 0;
-                    for (int k = 0; k <= 8; k++) {
-                        if (valid(i+move[k][0],j+move[k][1])){
-                            if (bomBoard[i+move[k][0]][j+move[k][1]]==1){
-                                totalBom++;
+                    for (int k = 0; k <= 8; k++) { // cek untuk setiap movenya
+                        if (valid(i+move[k][0],j+move[k][1])){ //jika valid
+                            if (bomBoard[i+move[k][0]][j+move[k][1]]==1){ //jika 1 maka bom
+                                totalBom++; // tambah totalbomnya
                             }
                         }
                     }
                     //cek apakah tile kelebihan, kalau iya, maka bobot heuristicnya akan lebih besar(lebih jelek)
-                    if (Math.abs(board[i][j]-totalBom)>0){
-                        wrongTile++;
+                    if (totalBom-board[i][j]>0){
                         res += Math.abs(board[i][j]-totalBom) * 1.5;
                     } else {
                         res+=Math.abs(board[i][j]-totalBom);
@@ -95,7 +93,7 @@ public class Mosaic implements Comparable<Mosaic>{
         this.heuristic=res;
         return this.heuristic;
     }
-    // method untuk sorting
+    // method untuk sorting ascending
     @Override
     public int compareTo(Mosaic other) {
         return this.heuristic-other.heuristic;

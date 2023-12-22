@@ -10,8 +10,8 @@
 * jika ingin memakai bisa comment kode yang akan diganti dan uncomment code yang ingin dipakai
 * test.txt berisi 100 testcase puzzle 5x5
 * test2.txt berisi 10 testcase puzzle dengan variasi 7x7, 10x10, 15x15, dan 20x20
-* kode berjalan sekitar 2 menit 35 detik untuk test.txt
-* kode berjalan sekitar 6 menit 10 detik untuk test2.txt
+* kode berjalan sekitar 3 menit 30 detik untuk test.txt
+* kode berjalan sekitar 6 menit 30 detik untuk test2.txt
  */
 
 import java.io.File;
@@ -24,7 +24,7 @@ import java.util.Scanner;
 public class MozaicTester {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(new File("test.txt"));
-//        Scanner sc = new Scanner(new File("src/test2.txt"));
+    //    Scanner sc = new Scanner(new File("test2.txt"));
         Random randomizer = new Random(2);
         FileWriter fw = new FileWriter("output.txt");
 
