@@ -1,3 +1,19 @@
+/*
+* kelompok 8
+* Miroslav Matthew Alva 6182101004
+* Kevin Christian
+* Vico Pratama
+* referensi kode contoh genetic algorithm di ms teams
+* kami juga mengupload kode kami pada github https://github.com/miroslavmatthew/MozaicPuzzle.git
+* kode akan mengeluarkan output pada file output.txt
+* beberapa kode pada kode ini di comment karena digunakan saat eksperiment
+* jika ingin memakai bisa comment kode yang akan diganti dan uncomment code yang ingin dipakai
+* test.txt berisi 100 testcase puzzle 5x5
+* test2.txt berisi 10 testcase puzzle dengan variasi 7x7, 10x10, 15x15, dan 20x20
+* kode berjalan sekitar 2 menit 35 detik untuk test.txt
+* kode berjalan sekitar 6 menit 10 detik untuk test2.txt
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -8,6 +24,7 @@ import java.util.Scanner;
 public class MozaicTester {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(new File("src/test.txt"));
+//        Scanner sc = new Scanner(new File("src/test2.txt"));
         Random randomizer = new Random(2);
         FileWriter fw = new FileWriter("src/output.txt");
 
@@ -67,19 +84,15 @@ public class MozaicTester {
                 fw.write(fittest.toString());
                 fw.write("Successfull in "+cnt+" generation\n");
                 ac++;
-                System.out.println(fittest);
-                System.out.println("Successfull in "+cnt+" generation");
             }
             // if not solve
             else {
                 fw.write(fittest.toString());
                 fw.write("the best in "+cnt+" generation\n");
-                System.out.println(fittest);
-                System.out.println("the best in "+cnt+" generation");
             }
 
         }
-        double accuracy = ac * 1.0 / tc;
+        double accuracy = ac * 1.0 / tc;// count the accuracy
         fw.write("Acurracy = "+accuracy+"\n"+"right "+ac+" of "+tc+"\n");
         fw.close();
     }
