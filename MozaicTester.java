@@ -23,10 +23,10 @@ import java.util.Scanner;
 
 public class MozaicTester {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(new File("src/test.txt"));
+        Scanner sc = new Scanner(new File("test.txt"));
 //        Scanner sc = new Scanner(new File("src/test2.txt"));
         Random randomizer = new Random(2);
-        FileWriter fw = new FileWriter("src/output.txt");
+        FileWriter fw = new FileWriter("output.txt");
 
         //input number of testcase
         int tc = sc.nextInt();
@@ -41,7 +41,7 @@ public class MozaicTester {
                 }
             }
             // get all the parameter
-            Scanner param = new Scanner(new File("src/params.txt"));
+            Scanner param = new Scanner(new File("params.txt"));
             int maxGeneration = param.nextInt();
             int populationSize = param.nextInt();
             double elitismPercentage = param.nextDouble();
