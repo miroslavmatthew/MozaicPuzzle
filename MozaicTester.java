@@ -1,8 +1,8 @@
 /*
 * kelompok 8
 * Miroslav Matthew Alva 6182101004
-* Kevin Christian
-* Vico Pratama
+* Kevin Christian 6182101018
+* Vico Pratama 6182101011
 * referensi kode contoh genetic algorithm di ms teams
 * kami juga mengupload kode kami pada github https://github.com/miroslavmatthew/MozaicPuzzle.git
 * kode akan mengeluarkan output pada file output.txt
