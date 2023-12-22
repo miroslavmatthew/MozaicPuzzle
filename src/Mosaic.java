@@ -47,10 +47,15 @@ public class Mosaic implements Comparable<Mosaic>{
                             }
                         }
                     }
+
+                    //cek apakah tile kelebihan, kalau iya, maka bobot heuristicnya akan lebih besar(lebih jelek)
                     if (Math.abs(board[i][j]-totalBom)>0){
                         wrongTile++;
+                        res += Math.abs(board[i][j]-totalBom) * 1.5;
+                    } else {
+                        res+=Math.abs(board[i][j]-totalBom);
                     }
-                    res+=Math.abs(board[i][j]-totalBom);
+//                    res+=Math.abs(board[i][j]-totalBom);
                 }
 
             }
@@ -74,9 +79,13 @@ public class Mosaic implements Comparable<Mosaic>{
 
     //flip a random tile from 1 to 0 or 0 to 1
     public void doMutation(){
-        int i =  randgenerator.nextInt(bomBoard.length);
-        int j = randgenerator.nextInt(board.length);
-        bomBoard[i][j] = bomBoard[i][j] ^ 1;
+//        int i =  randgenerator.nextInt(bomBoard.length);
+//        bomBoard[i][j] = bomBoard[i][j] ^ 1;
+        //flip bit pada satu cell random di tiap barisnya
+        for (int k = 0; k < board.length; k++) {
+            int j = randgenerator.nextInt(board.length);
+            bomBoard[k][j] = bomBoard[k][j] ^ 1;
+        }
     }
 
     @Override

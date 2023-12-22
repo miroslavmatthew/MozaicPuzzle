@@ -3,390 +3,391 @@
 0 0 0 1 1 
 0 0 1 1 0 
 1 1 0 0 0 
-Successfull in 10 generation
+Successfull in 16 generation
 1 0 0 0 1 
 1 1 0 0 1 
 1 1 1 0 0 
 1 1 1 0 0 
 0 0 0 0 1 
-Successfull in 10 generation
-1 1 0 1 1 
-0 0 0 0 1 
+Successfull in 9 generation
+1 1 0 0 1 
+0 0 0 1 1 
 0 0 1 1 1 
-0 0 1 1 1 
-0 1 1 1 0 
-the best in 500 generation
+0 0 1 1 0 
+0 1 1 1 1 
+Successfull in 11 generation
 0 0 0 0 0 
 1 0 0 0 1 
 0 0 1 1 1 
 1 1 1 1 1 
 1 0 0 0 1 
-Successfull in 19 generation
+Successfull in 11 generation
 0 0 0 0 0 
 1 1 0 0 1 
 1 1 1 0 1 
 1 1 1 0 1 
 0 1 1 1 1 
-Successfull in 22 generation
+Successfull in 16 generation
 0 0 1 1 1 
 1 1 1 1 0 
 1 1 0 0 1 
 1 1 1 1 0 
 0 0 1 1 0 
-Successfull in 245 generation
-0 0 1 1 1 
+Successfull in 15 generation
+0 0 0 1 1 
 0 1 1 1 1 
-0 1 0 0 0 
 0 1 1 0 0 
-1 1 0 1 0 
-the best in 500 generation
+0 1 0 0 0 
+1 1 0 1 1 
+Successfull in 16 generation
 1 1 1 0 1 
 0 0 0 0 1 
 0 0 0 0 0 
 1 0 0 0 0 
 1 1 0 1 0 
-Successfull in 16 generation
+Successfull in 14 generation
 1 1 0 0 0 
+1 1 0 0 1 
 1 0 0 0 1 
-1 0 0 0 0 
-1 0 1 0 1 
-0 0 1 0 1 
-the best in 500 generation
+1 0 0 0 1 
+0 1 1 0 0 
+Successfull in 26 generation
 0 1 1 1 1 
 0 0 0 0 1 
 1 0 0 1 1 
 1 1 0 0 1 
 1 1 0 0 1 
-Successfull in 16 generation
+Successfull in 13 generation
 1 0 0 0 1 
 1 0 0 1 1 
 0 0 0 1 1 
 1 0 0 1 1 
 1 0 0 0 0 
+Successfull in 12 generation
+0 1 0 1 0 
+0 0 1 1 0 
+0 1 1 1 1 
+0 0 0 1 0 
+1 0 1 0 0 
+the best in 500 generation
+0 1 1 0 0 
+0 1 1 0 0 
+0 0 0 0 1 
+0 0 0 0 1 
+1 0 0 1 1 
+Successfull in 20 generation
+0 1 1 1 1 
+0 0 0 0 1 
+1 0 0 0 0 
+1 0 0 0 0 
+1 1 0 1 0 
+Successfull in 17 generation
+1 0 1 1 1 
+0 0 1 0 0 
+0 1 1 0 0 
+1 1 0 0 1 
+1 1 0 0 1 
 Successfull in 21 generation
 0 1 1 0 0 
-0 1 0 1 1 
-0 0 1 1 1 
-0 1 1 0 0 
-0 0 1 0 0 
-Successfull in 15 generation
-0 1 1 0 0 
-0 1 1 0 0 
-0 0 0 0 1 
-0 0 0 0 1 
-1 0 0 1 1 
-Successfull in 13 generation
-0 1 1 1 1 
-0 0 0 0 1 
-1 0 0 0 0 
-1 0 0 0 0 
-1 1 0 1 0 
-Successfull in 15 generation
-1 0 1 1 1 
-0 0 1 0 0 
-0 1 1 0 0 
-1 1 0 0 1 
-1 1 0 0 1 
-Successfull in 31 generation
-0 1 1 0 0 
 0 1 1 0 0 
 1 1 1 1 0 
 1 1 0 1 0 
 1 0 0 0 0 
-Successfull in 11 generation
-0 1 1 0 0 
-0 1 1 1 1 
-0 1 1 1 0 
-0 0 1 0 0 
-1 0 1 0 0 
-Successfull in 13 generation
-0 1 1 0 0 
-0 1 1 1 1 
-0 1 1 1 0 
-0 0 1 0 0 
-1 0 1 0 0 
-Successfull in 25 generation
-1 1 1 1 1 
-0 1 1 1 0 
-1 1 1 0 0 
-0 1 1 0 0 
-0 0 1 1 1 
-Successfull in 13 generation
-1 0 1 0 0 
-1 1 1 0 0 
-1 1 1 1 1 
-0 0 0 1 1 
-1 0 0 0 0 
-Successfull in 16 generation
-1 1 0 1 1 
-1 1 0 1 0 
-0 0 0 1 0 
-0 0 0 0 0 
-0 1 1 1 0 
-Successfull in 15 generation
-0 1 1 1 0 
-1 1 0 1 1 
-1 1 1 1 1 
-0 1 1 0 1 
-0 0 1 1 1 
-the best in 500 generation
-0 0 0 1 0 
-1 1 0 1 1 
-1 1 0 1 1 
-1 1 0 0 1 
-1 0 0 1 1 
-Successfull in 13 generation
-0 1 0 1 1 
-1 1 0 1 1 
-1 1 0 0 0 
-0 1 0 0 0 
-0 0 0 1 1 
-Successfull in 14 generation
-0 1 0 0 0 
-0 0 1 0 1 
-1 0 0 0 0 
-1 1 0 0 0 
-1 1 0 0 1 
-the best in 500 generation
-1 0 1 1 1 
-0 0 0 0 1 
-0 0 0 0 0 
-1 1 0 0 0 
-1 1 1 1 0 
-Successfull in 13 generation
-0 0 1 1 0 
-0 0 1 1 0 
-1 0 0 0 0 
-1 1 1 0 0 
-1 0 0 1 1 
-Successfull in 11 generation
-0 0 1 1 0 
-0 1 1 1 0 
-1 1 1 1 0 
-0 0 1 1 0 
-0 0 0 0 1 
-Successfull in 14 generation
-0 1 1 0 0 
-1 1 1 1 0 
-1 1 1 1 0 
-0 0 1 1 0 
-0 0 0 0 0 
-Successfull in 14 generation
-1 1 0 0 1 
-0 0 0 0 1 
-0 0 0 0 0 
-1 0 0 1 1 
-1 1 0 1 1 
-Successfull in 8 generation
-1 1 1 1 0 
-0 1 0 1 1 
-0 0 0 0 1 
-0 1 1 1 1 
-0 1 0 1 1 
-the best in 500 generation
-1 0 0 0 1 
-0 0 0 1 1 
-0 1 0 1 1 
-0 1 1 0 1 
-0 0 0 1 1 
-the best in 500 generation
-0 1 0 1 1 
-0 0 0 0 1 
-1 0 0 0 0 
-1 1 0 0 1 
-1 1 0 0 1 
-Successfull in 18 generation
-1 0 0 0 0 
-1 1 1 0 0 
-1 1 1 1 1 
-1 0 1 1 1 
-1 0 0 0 1 
-Successfull in 264 generation
-0 0 1 1 1 
-0 0 1 0 1 
-1 1 1 1 0 
-1 1 0 1 0 
-0 1 1 1 0 
 Successfull in 9 generation
-0 0 1 1 1 
 0 1 1 0 0 
-0 1 1 0 0 
-0 1 0 0 0 
-1 1 0 1 1 
-Successfull in 89 generation
-1 1 0 0 1 
-0 0 0 0 1 
+0 1 1 1 1 
+0 1 1 1 0 
 0 0 1 0 0 
-1 1 0 1 0 
-1 1 0 0 1 
-Successfull in 32 generation
+1 0 1 0 0 
+Successfull in 15 generation
 0 1 1 1 0 
-0 1 1 0 0 
-1 0 0 0 1 
-0 0 0 1 0 
-0 1 1 1 1 
-the best in 500 generation
-0 0 1 1 1 
-0 0 1 1 0 
-0 1 1 1 1 
-1 1 0 1 0 
-1 0 0 0 0 
-Successfull in 17 generation
-1 1 0 1 1 
-0 0 0 0 1 
-0 0 0 0 1 
-0 1 1 1 1 
-0 1 1 1 0 
-Successfull in 12 generation
-1 1 1 1 0 
-1 0 0 0 0 
-1 0 0 0 0 
-0 0 0 1 1 
-1 1 0 1 1 
-Successfull in 12 generation
-0 1 1 1 0 
-0 1 1 1 0 
-0 0 0 1 1 
-0 0 0 1 1 
-1 1 0 0 1 
-Successfull in 12 generation
-1 0 0 0 1 
-1 0 1 1 1 
-1 1 1 0 0 
-1 1 1 1 1 
-0 0 0 1 1 
-Successfull in 24 generation
-0 0 0 0 0 
-0 1 1 1 0 
-0 1 1 1 0 
-0 1 1 1 0 
-1 1 1 0 0 
-Successfull in 11 generation
-1 0 0 1 1 
-1 1 0 0 1 
-1 1 1 0 1 
-1 0 1 1 1 
 1 0 1 1 0 
+0 1 1 1 0 
+0 0 1 1 0 
+1 0 0 0 0 
 the best in 500 generation
+1 1 1 1 1 
+0 1 1 1 0 
+1 1 1 0 0 
+0 1 1 0 0 
+0 0 1 1 1 
+Successfull in 79 generation
+1 0 1 0 0 
+1 1 1 0 0 
+1 1 1 1 1 
+0 0 0 1 1 
+1 0 0 0 0 
+Successfull in 13 generation
+1 1 0 1 1 
+1 1 0 1 0 
+0 0 0 1 0 
+0 0 0 0 0 
+0 1 1 1 0 
+Successfull in 18 generation
+0 1 1 1 1 
+1 1 1 0 1 
+1 1 1 1 1 
+0 0 1 1 0 
+0 0 1 1 1 
+Successfull in 20 generation
+0 0 0 1 0 
+1 1 0 1 1 
+1 1 0 1 1 
+1 1 0 0 1 
+1 0 0 1 1 
+Successfull in 12 generation
+0 1 0 1 1 
+1 1 0 1 1 
+1 1 0 0 0 
+0 1 0 0 0 
+0 0 0 1 1 
+Successfull in 11 generation
+0 0 1 1 0 
+1 0 0 0 0 
+1 0 0 0 1 
+1 1 0 0 1 
+1 1 0 0 0 
+Successfull in 25 generation
+1 0 1 1 1 
+0 0 0 0 1 
+0 0 0 0 0 
+1 1 0 0 0 
+1 1 1 1 0 
+Successfull in 18 generation
+0 0 1 0 1 
+0 1 1 1 0 
+0 0 0 0 0 
+1 0 1 0 0 
+1 1 0 1 1 
+the best in 500 generation
+0 0 1 1 0 
+0 1 1 1 0 
+1 1 1 1 0 
+0 0 1 1 0 
+0 0 0 0 1 
+Successfull in 15 generation
+0 1 1 0 0 
+1 1 1 1 0 
+1 1 1 1 0 
+0 0 1 1 0 
+0 0 0 0 0 
+Successfull in 11 generation
+1 1 0 0 1 
+0 0 0 0 1 
+0 0 0 0 0 
+1 0 0 1 1 
+1 1 0 1 1 
+Successfull in 18 generation
+1 1 1 1 0 
+1 1 0 1 1 
+0 0 0 0 1 
+0 0 1 1 1 
+1 1 1 1 0 
+Successfull in 61 generation
+0 0 0 0 1 
+1 0 0 0 1 
+0 1 1 1 1 
+0 0 1 1 1 
+1 0 0 0 1 
+the best in 500 generation
+0 1 0 1 1 
+0 0 0 0 1 
+1 0 0 0 0 
+1 1 0 0 1 
+1 1 0 0 1 
+Successfull in 6 generation
+1 0 0 0 0 
+1 1 1 0 0 
+1 1 1 1 1 
+1 0 1 1 1 
+1 0 0 0 1 
+Successfull in 13 generation
+0 0 1 1 1 
+0 0 1 0 1 
+1 1 1 1 0 
+1 1 0 1 0 
+0 1 1 1 0 
+Successfull in 20 generation
+0 0 1 1 1 
+0 1 1 0 0 
+0 1 1 0 0 
+0 1 0 0 0 
+1 1 0 1 1 
+Successfull in 15 generation
+1 1 0 0 1 
+0 0 0 0 1 
+0 0 1 0 0 
+1 1 0 1 0 
+1 1 0 0 1 
+Successfull in 28 generation
+1 1 1 1 1 
+0 1 0 1 0 
+0 1 0 0 0 
+0 0 1 1 0 
+0 0 1 0 1 
+the best in 500 generation
+0 0 1 1 1 
+0 0 1 1 0 
+0 1 1 1 1 
+1 1 0 1 0 
+1 0 0 0 0 
+Successfull in 15 generation
+1 1 0 1 1 
+0 0 0 0 1 
+0 0 0 0 1 
+0 1 1 1 1 
+0 1 1 1 0 
+Successfull in 23 generation
+1 1 1 1 0 
+1 0 0 0 0 
+1 0 0 0 0 
+0 0 0 1 1 
+1 1 0 1 1 
+Successfull in 88 generation
+0 1 1 1 0 
+0 1 1 1 0 
+0 0 0 1 1 
+0 0 0 1 1 
+1 1 0 0 1 
+Successfull in 14 generation
+1 0 0 0 1 
+1 0 1 1 1 
+1 1 1 0 0 
+1 1 1 1 1 
+0 0 0 1 1 
+Successfull in 13 generation
+0 0 0 0 0 
+0 1 1 1 0 
+0 1 1 1 0 
+0 1 1 1 0 
+1 1 1 0 0 
+Successfull in 14 generation
+1 0 0 1 1 
+1 1 0 0 1 
+1 1 1 0 1 
+1 1 1 0 1 
+0 0 1 1 1 
+Successfull in 26 generation
 1 0 0 0 1 
 1 0 0 0 0 
 0 0 0 1 1 
 0 1 1 1 1 
 1 1 1 0 1 
-Successfull in 19 generation
+Successfull in 23 generation
 0 1 0 0 0 
 1 1 1 1 0 
 1 1 1 1 0 
 0 0 1 1 0 
 0 0 1 1 1 
-Successfull in 9 generation
+Successfull in 22 generation
 0 1 1 1 0 
 0 1 1 1 0 
 0 0 0 1 0 
 1 0 0 0 0 
 1 1 1 1 0 
-Successfull in 22 generation
+Successfull in 19 generation
 1 1 1 1 1 
 0 1 1 0 0 
 0 0 0 0 0 
 0 1 1 0 0 
 0 0 1 0 1 
-Successfull in 19 generation
+Successfull in 17 generation
 0 1 1 1 0 
 0 1 1 0 0 
 0 0 0 0 0 
 0 0 0 0 0 
-1 1 1 1 1 
-Successfull in 13 generation
-1 0 0 0 0 
-1 1 1 1 1 
-1 1 1 1 1 
-1 0 0 1 1 
-1 0 0 0 1 
-Successfull in 16 generation
-1 0 1 1 1 
-1 1 1 1 0 
-1 1 1 0 0 
-1 0 0 0 0 
-0 0 0 0 1 
-Successfull in 14 generation
-0 0 1 1 1 
-1 1 0 0 1 
-0 0 0 0 0 
-1 1 0 0 0 
-1 1 1 1 1 
-Successfull in 24 generation
-0 0 1 1 0 
-0 0 1 1 1 
-1 1 1 0 0 
-1 1 1 0 1 
-0 1 1 1 1 
-Successfull in 20 generation
-0 1 1 0 0 
-0 1 1 1 1 
-1 0 0 1 1 
-1 1 0 0 1 
-1 1 0 0 1 
-Successfull in 31 generation
-1 0 0 0 0 
-0 1 0 0 0 
-1 1 0 1 1 
-1 1 0 0 1 
-1 0 0 1 1 
-the best in 500 generation
-0 0 1 1 0 
-0 0 1 0 0 
-1 1 0 0 1 
-1 0 0 0 0 
-1 1 0 0 1 
-the best in 500 generation
-0 0 1 1 0 
-0 1 1 1 0 
-1 0 0 0 1 
-0 0 0 1 1 
-1 0 0 1 1 
-Successfull in 33 generation
-0 0 1 0 0 
-1 1 1 0 1 
-0 1 1 1 1 
-0 1 0 1 0 
-1 1 1 1 0 
-the best in 500 generation
-1 1 1 1 0 
-0 0 1 1 0 
-0 0 1 1 1 
-0 0 1 1 0 
-1 1 1 1 1 
-Successfull in 24 generation
-1 0 1 0 0 
-0 1 1 1 1 
-0 0 0 1 1 
-1 0 1 1 1 
-1 1 1 0 0 
-the best in 500 generation
-1 1 1 1 1 
-1 1 0 0 1 
-1 0 0 0 0 
-1 0 0 0 0 
-1 1 0 1 1 
-Successfull in 9 generation
-1 0 1 1 1 
-1 0 0 0 1 
-0 0 0 0 1 
-0 0 0 1 1 
 1 1 1 1 1 
 Successfull in 15 generation
+1 0 0 0 0 
+1 1 1 1 1 
+1 1 1 1 1 
+1 0 0 1 1 
+1 0 0 0 1 
+Successfull in 24 generation
+1 0 1 1 1 
+1 1 1 1 0 
+1 1 1 0 0 
+1 0 0 0 0 
+0 0 0 0 1 
+Successfull in 11 generation
+0 0 1 1 1 
+1 1 0 0 1 
+0 0 0 0 0 
+1 1 0 0 0 
+1 1 1 1 1 
+Successfull in 15 generation
+0 0 1 1 0 
+0 0 1 1 1 
+1 1 1 0 0 
+1 1 1 0 1 
+0 1 1 1 1 
+Successfull in 21 generation
+0 1 1 0 0 
+0 1 1 1 1 
+1 0 0 1 1 
+1 1 0 0 1 
+1 1 0 0 1 
+Successfull in 20 generation
+1 0 0 0 1 
+1 0 0 0 0 
+1 1 0 1 0 
+1 1 0 1 1 
+1 0 0 0 1 
+Successfull in 78 generation
+0 0 1 1 0 
+0 0 1 1 0 
+1 0 0 0 0 
+1 1 0 0 0 
+1 0 0 0 1 
+Successfull in 17 generation
+0 0 1 1 0 
+0 1 1 1 0 
+1 0 0 0 1 
+0 0 0 1 1 
+1 0 0 1 1 
+Successfull in 15 generation
+0 1 1 0 0 
+1 0 1 0 0 
+0 1 1 1 1 
+1 0 1 1 0 
+0 1 1 1 0 
+the best in 500 generation
+1 1 1 1 0 
+0 0 1 1 0 
+0 0 1 1 1 
+0 0 1 1 0 
+1 1 1 1 1 
+Successfull in 16 generation
+0 1 1 0 0 
+0 0 1 1 1 
+0 0 1 1 1 
+1 1 0 1 1 
+0 1 1 0 0 
+Successfull in 20 generation
+1 1 1 1 1 
+1 1 0 0 1 
+1 0 0 0 0 
+1 0 0 0 0 
+1 1 0 1 1 
+Successfull in 12 generation
+1 0 1 1 1 
+1 0 0 0 1 
+0 0 0 0 1 
+0 0 0 1 1 
+1 1 1 1 1 
+Successfull in 19 generation
 0 0 0 1 1 
 1 1 0 0 1 
 1 1 0 0 0 
 1 1 0 0 0 
 1 0 0 1 1 
-Successfull in 13 generation
+Successfull in 10 generation
 0 0 0 1 0 
 0 1 1 1 0 
 1 1 1 1 0 
 1 1 1 0 0 
 0 0 0 0 0 
+<<<<<<< HEAD
 Successfull in 14 generation
 0 1 1 0 0 
 1 1 1 1 0 
@@ -600,3 +601,8 @@ the best in 500 generation
 Successfull in 12 generation
 Acurracy = 0.8
 right 80 of 100
+=======
+Successfull in 11 generation
+Acurracy = 0.9076923076923077
+right 59 of 65
+>>>>>>> 42de3b7ea782ecf0cf208bde327529e30638ef95
