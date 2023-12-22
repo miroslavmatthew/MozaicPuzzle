@@ -322,10 +322,71 @@ Successfull in 24 generation
 1 1 1 0 1 
 0 1 1 1 1 
 Successfull in 20 generation
-1 0 0 0 1 
+0 1 1 0 0 
+0 1 1 1 1 
+1 0 0 1 1 
+1 1 0 0 1 
+1 1 0 0 1 
+Successfull in 31 generation
 1 0 0 0 0 
-1 1 0 1 0 
+0 1 0 0 0 
 1 1 0 1 1 
+1 1 0 0 1 
+1 0 0 1 1 
+the best in 500 generation
+0 0 1 1 0 
+0 0 1 0 0 
+1 1 0 0 1 
+1 0 0 0 0 
+1 1 0 0 1 
+the best in 500 generation
+0 0 1 1 0 
+0 1 1 1 0 
 1 0 0 0 1 
+0 0 0 1 1 
+1 0 0 1 1 
+Successfull in 33 generation
+0 0 1 0 0 
+1 1 1 0 1 
+0 1 1 1 1 
+0 1 0 1 0 
+1 1 1 1 0 
+the best in 500 generation
+1 1 1 1 0 
+0 0 1 1 0 
+0 0 1 1 1 
+0 0 1 1 0 
+1 1 1 1 1 
+Successfull in 24 generation
+1 0 1 0 0 
+0 1 1 1 1 
+0 0 0 1 1 
+1 0 1 1 1 
+1 1 1 0 0 
+the best in 500 generation
+1 1 1 1 1 
+1 1 0 0 1 
+1 0 0 0 0 
+1 0 0 0 0 
+1 1 0 1 1 
+Successfull in 9 generation
+1 0 1 1 1 
+1 0 0 0 1 
+0 0 0 0 1 
+0 0 0 1 1 
+1 1 1 1 1 
+Successfull in 15 generation
+0 0 0 1 1 
+1 1 0 0 1 
+1 1 0 0 0 
+1 1 0 0 0 
+1 0 0 1 1 
+Successfull in 13 generation
+0 0 0 1 0 
+0 1 1 1 0 
+1 1 1 1 0 
+1 1 1 0 0 
+0 0 0 0 0 
 Successfull in 14 generation
-0 0 1 1
+Acurracy =0.8
+right 52 of 65

@@ -13,6 +13,7 @@ public class MozaicTester {
 
         //input number of testcase
         int tc = sc.nextInt();
+        int ac = 0;//menghitung jumlah benar untuk menghitung akurasi
         for (int q = 0; q < tc; q++) {
             int n = sc.nextInt();//input the size of the board
             int[][] board = new int[n][n];
@@ -65,6 +66,7 @@ public class MozaicTester {
             if (fittest.getHeuristic()==0){
                 fw.write(fittest.toString());
                 fw.write("Successfull in "+cnt+" generation\n");
+                ac++;
                 System.out.println(fittest);
                 System.out.println("Successfull in "+cnt+" generation");
             }
@@ -77,6 +79,8 @@ public class MozaicTester {
             }
 
         }
+        double accuracy = ac * 1.0 / tc;
+        fw.write("Acurracy = "+accuracy+"\n"+"right "+ac+" of "+tc+"\n");
         fw.close();
     }
 }
